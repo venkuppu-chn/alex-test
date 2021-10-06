@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  pr:
+  pr-template:
     runs-on: ubuntu-latest
     steps:
        - uses: actions/checkout@v2
@@ -28,10 +28,11 @@ jobs:
             temp_name = ''
             with open('file_changed.txt', 'r') as f_obj:
                 file_list = f_obj.read() 
-            if '.txt' in file_list:
-                temp_name = './.github/pull_request_template.md'
+            if '.txt' in file_list or '.md' in file_list:
+                temp_name = './.github/pr-template/document_template.md'
             else:
-                temp_name = './.github/pull_request_template_1.md'
+                temp_name = './.github/pr-template/feature_template.md'
+
             print(f"::set-output name=temp_file::{temp_name}")
          shell: python
             
