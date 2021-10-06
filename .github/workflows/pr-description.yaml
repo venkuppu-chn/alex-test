@@ -1,0 +1,31 @@
+name: PR Template Update
+
+on:
+  pull_request:
+    types: [ opened, synchronize ]
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  pr:
+    runs-on: ubuntu-latest
+    steps:
+       - uses: actions/checkout@v2
+       - name: Read Template File
+         id: template
+         uses: juliangruber/read-file-action@v1
+         with:
+            path: ./.github/pull_request_template.md
+       - name: Print Template
+         run: echo "${{ steps.template.outputs.content }}"
+       - id: files
+         uses: jitterbit/get-changed-files@v1
+       - run: |
+            echo ${{ steps.files.outputs.all }}
+    
+
+#       - uses: riskledger/update-pr-description@dev
+#         with:
+#           body: ${{ description }} 
+#           token: ${{ secrets.GITHUB_TOKEN }}
