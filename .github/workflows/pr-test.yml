@@ -1,0 +1,10 @@
+name: "Workflow"
+on: [push]
+jobs:
+  build:
+    runs-on: "ubuntu-latest"
+    steps:
+      - uses: "actions/checkout@master"
+      - name: "TODO to Issue"
+        uses: "venkuppu-chn/cortx-pr-checklist@1.0"
+        
