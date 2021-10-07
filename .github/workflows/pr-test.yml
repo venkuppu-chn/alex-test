@@ -4,7 +4,7 @@ jobs:
   build:
     runs-on: "ubuntu-latest"
     steps:
-      - uses: "actions/checkout@master"
-      - name: "TODO to Issue"
+      - uses: "actions/checkout@main"
+      - name: "PR checklist"
         uses: "venkuppu-chn/cortx-pr-checklist@v1.2"
         
