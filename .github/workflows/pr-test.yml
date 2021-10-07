@@ -6,5 +6,5 @@ jobs:
     steps:
       - uses: "actions/checkout@master"
       - name: "TODO to Issue"
-        uses: "venkuppu-chn/cortx-pr-checklist@v1.1"
+        uses: "venkuppu-chn/cortx-pr-checklist@v1.2"
         
