@@ -6,3 +6,38 @@ Mental
 Handicapped
 Test 5
 Test
+White
+Black
+Whitelist
+Blacklist
+White List
+Black List
+hack
+trash
+garbage
+rubbish
+junk
+crap
+idiot
+hate
+meh
+retard
+bastard
+shit
+damn
+love
+gay
+fag
+whore
+fuck
+cunt
+ass
+snowflake
+nigga
+nigger
+dyke
+goddamn
+motherfucker
+bastard
+bitch
+dick
